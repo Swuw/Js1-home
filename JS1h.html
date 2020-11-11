@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Js1</title>
+</head>
+<body>
+<script>
+    var secondname=prompt("Фамилия");
+    secondname = secondname.replace(/[0-9]/g, '');
+    var name=prompt("Имя");
+    name = name.replace(/[0-9]/g, '');
+    var fathername=prompt("Отчество");
+    fathername = fathername.replace(/[0-9]/g, '');
+    var age=parseInt (prompt ("Возраст"));
+    var gender=confirm('Ваш пол мужской?');
+    pens=(gender==true && age>=62) ? ' Да' :
+        (gender==true && age<62) ? ' Нет' :
+            (gender==false && age>=57) ? ' Да' :
+                (gender==false && age<57) ? ' Нет': '----';
+    sex=(gender==true) ? ' Мужской' :
+        (gender==false) ? ' Женский' : ' Неопределен';
+    aged=parseInt(age*365+age/4);
+    agef=age+5;
+    alert ("Ваше ФИО: " + secondname +' '+ name +' ' + fathername +' '
+        +'\nВаш возраст в годах: ' + age
+        + '\nВаш возраст в днях: ' +aged
+        + '\nЧерез 5 лет вам будет: ' + agef
+        + '\nВаш пол: ' + sex
+        + '\nВы на пенсии: ' + pens );
+
+</script>
+</body>
+</html>
+
+
